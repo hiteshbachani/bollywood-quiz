@@ -1,0 +1,215 @@
+
+
+
+var readlineSync = require('readline-sync');
+
+var highScore = 10;
+var score = 0;
+
+
+function questionOne(question, answer){
+
+  var userAnswer = readlineSync.question('Ranbir Kapoor is the son of Rishi kapoor and? ')
+
+  if(userAnswer.toUpperCase() === 'Neetu Singh'.toUpperCase()){
+    score = score + 1
+    console.log('You are right, your score is ' + score)
+    console.log('----------')
+  } else {
+    score = score - 1
+    console.log('You are wrong, correct answer is Neetu Singh, now your score is ' + score)
+    console.log('---------')
+  }
+}
+questionOne('Ranbir Kapoor is the son of Rishi Kapoor and? ', 'Neetu Singh')
+
+ function questionTwo(question, answer){
+
+   var userAnswerTwo = readlineSync.question('Alia Bhatt is the daughter of? ')
+
+   if(userAnswerTwo.toUpperCase() === 'Mahesh Bhatt'.toUpperCase()){
+     score = score + 1
+     console.log('You are right again, your score is ' + score)
+     console.log('----------')
+   } else {
+     score = score - 1
+     console.log('oops, your score: ' + score)
+     console.log('----------')
+   }
+ }
+ questionTwo('Alia Bhatt is the daughter of? ', 'Mahesh Bhatt')
+
+ function questionThree(question, answer){
+
+   var userAnswerThree = readlineSync.question("First name of Ajay Devgn's is? ")
+
+   if(userAnswerThree.toUpperCase() === 'Kajol'.toUpperCase()){
+     score = score + 1
+     console.log('You are right and you are qualified for level two, your score is ' + score)
+     console.log('----------')
+   } else {
+     score = score - 1
+     console.log('You are wrong! Correct answer is Kajol, your score is ' + score)
+     console.log('----------')
+   }
+ }
+ questionThree('Wife of Ajay Devgn', 'Kajol')
+
+
+ function questionFour(question, answer){
+
+   var userAnswerFour = readlineSync.question("Amitabh Bachchan's first name in agneepath was? ")
+
+   if(userAnswerFour.toUpperCase() === 'Vijay'.toUpperCase()){
+     score = score + 2
+     console.log('Well done! your score is ' + score)
+     console.log('----------')
+   } else {
+     score = score - 1
+     console.log('Better luck next time, your score is ' + score)
+     console.log('---------')
+   }
+ }
+
+ questionFour('Amitabh Bachchan first name in agneepath was?', 'Vijay')
+
+
+ function questionFive(question, answer){
+
+   var userAnswerFive = readlineSync.question('First name of the lead actor in Bahubhali ')
+
+   if(userAnswerFive.toUpperCase() === 'Prabhas'.toUpperCase()){
+     score = score + 2
+     console.log('Champ! Your score is ' + score)
+     console.log('----------')
+   } else {
+     score = score - 1
+     console.log('Correct Answer is Prabhas, your score is ' + score)
+     console.log('---------')
+   }
+ }
+
+ questionFive('Who was the lead role in bahubhali? ', 'Prabhas');
+
+
+ function questionSix(question, answer){
+
+   var userAnswerSix = readlineSync.question('Jahnvi Kapoor is the daughter of ')
+
+   if(userAnswerSix.toUpperCase() === 'Sridevi'.toUpperCase()){
+     score = score + 2
+     console.log('Awesome! You advance to final level 3, Your score is ' + score)
+     console.log('----------')
+   } else {
+     score = score - 1
+     console.log('Correct answer is Sridevi, your score is ' + score)
+     console.log('----------')
+   }
+ }
+ 
+ questionSix('Jahnvi Kapoor is the daughter of? ', 'Sridevi')
+
+
+function questionSeven(question, answer){
+
+  var userAnswerSeven = readlineSync.question('Who was the director of RamLeela? ')
+
+  if(userAnswerSeven.toUpperCase() === 'Sanjay Leela Bhansali'.toUpperCase()){
+    score = score + 2
+    console.log('Wow! Your score is ' + score)
+    console.log('----------')
+  } else {
+    score = score - 1
+    console.log('Correct Answer is Sanjay Leela Bhansali, now your score is ' + score)
+    console.log('---------')
+  }
+}
+
+questionSeven('Who was the director of Ramleela?', 'Sanjay Leela Bhansali')
+
+
+function questionEight(question, answer){
+
+  var userAnswerEight = readlineSync.question('Akshay Kumar real name is? ')
+
+  if(userAnswerEight.toUpperCase() === 'Rajiv Bhatia'.toUpperCase()){
+    score = score + 2
+    console.log('You are right! Your score is ' + score)
+    console.log('----------')
+  } else {
+    score = score - 1
+    console.log('Correct answer is Rajiv Bhatia, your score is ' + score)
+    console.log('---------')
+  }
+}
+
+questionEight('Akshay Kumar real name is? ', 'Rajiv Bhatia')
+
+
+function questionNine(question, answer){
+
+  var userAnswerNine = readlineSync.question('Who owns RED CHILLIES ENTERTAINMENT? ')
+
+  if(userAnswerNine.toUpperCase() === 'Shahrukh Khan'.toUpperCase()){
+    score = score + 2
+    console.log('Nailed it, you are a true bollywood fan!, your score is ' + score)
+    console.log('----------')
+  } else {
+    score = score - 1
+    console.log('Correct answer is Shahrukh Khan, your score is ' + score)
+    console.log('---------')
+  }
+}
+
+questionNine('Who owns RED CHILLIES ENTERTAINMENT? ', 'Shahrukh Khan')
+
+
+if( readlineSync.keyInYN('Is Ishan Khatter a brother of Shahid Kapoor? ')) {
+
+  score = score + 2
+  console.log('You are right, your score is ' + score)
+  console.log('--------')
+} else {
+  score =  score - 1
+  console.log('Wrong!, Your score is ' + score) 
+  console.log('---------')
+}
+
+const chalk = require('chalk');
+
+ list = ['SAIFALI KHAN', 'SHAHRUKH KHAN', 'SHAHID KAPOOR', 'RAJKUMAR RAO'];
+
+ query = readlineSync.keyInSelect(list, 'Who was in the lead role in Sacred Games? ');
+
+
+   if(list[query] === list[0]){
+
+   score = score + 2
+     console.log('You are right!, your score is ' + score)
+     console.log('---------')
+   } else {
+
+     score = score - 2
+     console.log('You are wrong!, your score is ' + score)
+     console.log('--------')
+   } 
+
+
+
+
+
+
+   if(score<highScore){
+
+    console.log('Your score is ' + score)
+   } else {
+     console.log('Congratulations, you have beaten high score, please send SS')
+   }
+
+
+
+console.log(chalk.magentaBright.bold('Your final score is ' + score))
+console.log(chalk.blue.bold.underline('Previous High Score: ' + highScore))
+
+
+
